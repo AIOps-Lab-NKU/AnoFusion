@@ -4,7 +4,7 @@ def log_to_seq(key, templates, structure, start_time, end_time):
     structure = pd.DataFrame(structure)
     print("structure:", structure.shape)
     print("structure.columns:", structure.columns)
-    window_size = 60 # 一分钟的窗口大小
+    window_size = 60
     series = []
     
     for i in range(start_time, end_time):
