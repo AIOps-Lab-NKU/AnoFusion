@@ -38,7 +38,7 @@ def get_data(mode_name, matrix_store_path, proportion):
     
     if not os.path.exists(join(store_nmiMatrix_path, matrix_store_path)):
         nmiMatrix1 = np.array([[0 for col in range(channels.shape[0])]
-                              for row in range(channels.shape[0])])  # 这部分计算比较耗时，可以存储在文件中
+                              for row in range(channels.shape[0])])
         nmiMatrix2 = np.array([[0 for col in range(channels.shape[0])]
                               for row in range(channels.shape[0])])
         nmiMatrix3 = np.array([[0 for col in range(channels.shape[0])]
@@ -152,7 +152,7 @@ if __name__ == '__main__':
     parser.add_argument('--version', type=int, action='store', help='the evaluate version')
     parser.add_argument('--epoch_num', type=int, default=100, help='the epoch of training')
     parser.add_argument('--batch_size', type=int, default=64, help='the batch_size of training')
-    parser.add_argument('--window_size', type=int, default=20, help='the windowsize of data')  # 10分钟
+    parser.add_argument('--window_size', type=int, default=20, help='the windowsize of data')
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO,
@@ -176,9 +176,8 @@ if __name__ == '__main__':
         train_loader = DataLoader(dataset=train_data, batch_size=args.batch_size, shuffle=True, drop_last=True)
         dataset_length = int(len(train_data)/args.batch_size)
 
-        # 定义损失函数和优化器
-        node_num = channels.shape[0]  # 节点的个数
-        edge_types = 6  # 边的种类
+        node_num = channels.shape[0]
+        edge_types = 6
         net = Net(node_num=node_num, edge_types=edge_types, window_samples_num=args.window_size, dropout=0.1).cuda(cuda_device)
         criterion = nn.MSELoss()
         optimizer = torch.optim.Adam(net.parameters(), lr=1e-5, betas=(0.9, 0.999))
