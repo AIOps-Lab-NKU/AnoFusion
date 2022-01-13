@@ -173,7 +173,6 @@ def linear_interpolation(service_s, data, interval):
 def write(service_s, store_path):
     if not os.path.exists(store_path):
         os.mkdir(store_path)
-    # 对指标数据插值并存储
     df_1 = pd.read_csv(data_path + service_s + '_2021-07-01_2021-07-15.csv')
     df_2 = pd.read_csv(data_path + service_s + '_2021-07-15_2021-07-31.csv')
     df = pd.concat([df_1, df_2], sort=True)
@@ -187,18 +186,16 @@ def write(service_s, store_path):
         df = df.drop(['label'], axis=1)
     if 'run_fault' in df.columns:
         df = df.drop(['run_fault'], axis=1)
-    df = df.loc[:, (df != 0).any(axis=0)] # 去除全0列
+    df = df.loc[:, (df != 0).any(axis=0)]
     df.to_csv(store_linear_interpolation_data + '/metrics/' + service_s + '.csv', index=False)
     
     print("df ok")
-    # 对调用链数据首先进行序列化，然后插值并存储
     trace = pd.read_csv(data_path + 'trace_table_' + service_s.split('_')[0] + '_2021-07.csv')
     trace = trace.drop_duplicates(['timestamp'])
     if not os.path.exists(store_path + '/trace/'):
         os.mkdir(store_path + '/trace/')
     write_trace_json(service_s, service_s.split('_')[0] + '.json', trace)
-    
-    # 对日志数据首先进行序列化，然后插值并存储
+   
     stru = pd.read_csv(data_path + service_s.split('_')[0] + '_stru.csv')
     temp = pd.read_csv(data_path + service_s.split('_')[0] + '_temp.csv')
     print("stru.timestamp:", stru['timestamp'].values[0], stru['timestamp'].values[-1])
@@ -206,12 +203,9 @@ def write(service_s, store_path):
 
      
 def get_channels(service_s, dirname, proportion):
-    # write(service_s, store_linear_interpolation_data) # 主要为了序列化日志和调用链数据
+    write(service_s, store_linear_interpolation_data)
+    generate_sequence_data(service_s.split('_')[0])
     
-    # 插值日志和调用链
-    # generate_sequence_data(service_s.split('_')[0])
-    
-    # 读插值之后的数据，对齐时间戳
     trace = pd.read_csv(store_linear_interpolation_data + '/trace/' + service_s +'.csv')
     stru = pd.read_csv(store_linear_interpolation_data + '/log/' + service_s +'.csv')
     metric = pd.read_csv(store_linear_interpolation_data + '/metrics/' + service_s +'.csv')
@@ -240,6 +234,3 @@ def get_channels(service_s, dirname, proportion):
     align_trace = align_trace.drop('timestamp', axis=1)
     print(align_metric, align_log, align_trace)
     return label_with_time, align_metric, align_log, align_trace
-    
-
-# get_channels("mobservice2", "train", 0)
