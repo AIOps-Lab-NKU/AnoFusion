@@ -1,0 +1,20 @@
+,EventId,EventTemplate,Occurrences
+0,04fc62a7,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | INFO | <*> | <*> | mobservice2 | <*> | the list of all available services are redisservice1: http:/<*>, redisservice2: http:/<*>",382139
+1,4d53999a,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | INFO | <*> | <*> | mobservice2 | <*> | now call <*> inst:http:/<*> as a downstream service",382014
+2,1cf1ee8d,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | INFO | <*> | <*> | mobservice2 | <*> | request http:/<*>/get_value_from_redis and param={'keys': <*>",381991
+3,6a042719,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | INFO | <*> | <*> | mobservice2 | <*> | request http:/<*>/set_key_value_into_redis and param={'keys': <*> 'value': <*>",380086
+4,40264d24,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | INFO | <*> | <*> | mobservice2 | <*> | info <*> write success",379996
+5,41e96d8a,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | ERROR | <*> | mobservice2 | mob_helper.py -> mob_info_to_redis -> <*> | <*> | <*> information has expired, mobile phone login is invalid",1962
+6,4f8b65e7,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | INFO | <*> | mobservice2 | mob_helper.py -> mob_info_to_redis -> <*> | <*> | request http:/<*>/set_key_value_into_redis and param={'keys': <*> 'value': <*>",221
+7,306fbc07,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | INFO | <*> | mobservice2 | mob_helper.py -> mob_info_to_redis -> <*> | <*> | now call <*> inst:http:/<*> as a downstream service",4
+8,d41d8cd9,,7
+9,02cbcd2d,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | INFO | <*> | mobservice2 | mob_helper.py -> mob_info_to_redis -> <*> | <*> | info <*> write success",234
+10,786019ab,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | WARNING | <*> | <*> | mobservice2 | <*> | wait for <*> seconds for follow-up operations to simulate the login failure of the QR code expired",9
+11,25a290a9,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | INFO | <*> | mobservice2 | mob_helper.py -> mob_info_to_redis -> <*> | <*> | the list of all available services are redisservice1: http:/<*>, redisservice2: http:/<*>",9
+12,228c1dc0,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | INFO | <*> | mobservice2 | mob_helper.py -> mob_info_to_redis -> <*> | <*> | request http:/<*>/get_value_from_redis and param={'keys': <*>",2
+13,40264d24,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | INFO | <*> | <*> | mobservice2 | <*> | info <*> write success",380145
+14,04fc62a7,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | INFO | <*> | <*> | mobservice2 | <*> | the list of all available services are redisservice1: http:/<*>, redisservice2: http:/<*>",382126
+15,4d53999a,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | INFO | <*> | <*> | mobservice2 | <*> | now call <*> inst:http:/<*> as a downstream service",382123
+16,1cf1ee8d,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | INFO | <*> | <*> | mobservice2 | <*> | request http:/<*>/get_value_from_redis and param={'keys': <*>",382116
+17,6a042719,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | INFO | <*> | <*> | mobservice2 | <*> | request http:/<*>/set_key_value_into_redis and param={'keys': <*> 'value': <*>",380186
+18,41e96d8a,"""<*>-<*>-<*> <*>:<*>:<*>,<*> | ERROR | <*> | mobservice2 | mob_helper.py -> mob_info_to_redis -> <*> | <*> | <*> information has expired, mobile phone login is invalid",1969
