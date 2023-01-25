@@ -46,8 +46,8 @@ File Tree:
 File Tree:
 .
 ├── README.md
-├── config.py (A configuration file stating the name of the microservice and the range of timestamps.)
-├──data (The data folder stores the initial monitoring data of the three modalities.)
+├── config.py (State the name of the microservice and the range of timestamps.)
+├──data (Store the initial monitoring data of the three modalities.)
     ├── mobservice2_2021-07-01_2021-07-15.csv
     ├── mobservice2_2021-07-15_2021-07-31.csv
     ├── mobservice2_stru.csv
@@ -65,8 +65,8 @@ File Tree:
 ├── serialize (Assist in the serialization of logs and traces.)
     ├── log_to_sequence.py
     └── trace_to_sequence.py
-└── utils (The main execution file.）
-    ├── generate_channels.py (This file processes the raw multimodal data into an input form for the AnoFusion.)
+└── utils (The main execution files.）
+    ├── generate_channels.py (Process the raw multimodal data into an input form for the AnoFusion.)
     ├── main.py
     ├── train.sh (Execution file for training phase.)
     └── eval.sh (Execution file for evaluation phase.)
