@@ -72,7 +72,14 @@ File Tree:
     └── eval.sh (Execution file for evaluation phase.)
 ```
 
-### Cite our paper (has been accepted by KDD'23)
+### Citing AnoFusion
+AnoFusion paper is published in KDD 2023. If you use AnoFusion, we would appreciate citations to the following paper:
+
+`Robust Multimodal Failure Detection for Microservice Systems.`
+
+> By Chenyu Zhao, Minghua Ma, Shenglin Zhang, Dan Pei, et.al.
+
+BibTex:
 ```
 @article{zhao2023robust,
   title={Robust Multimodal Failure Detection for Microservice Systems},
