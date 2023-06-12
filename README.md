@@ -72,7 +72,7 @@ File Tree:
     └── eval.sh (Execution file for evaluation phase.)
 ```
 
-### Cite our paper (will be published at KDD'23)
+### Cite our paper (has been accepted by KDD'23)
 ```
 @article{zhao2023robust,
   title={Robust Multimodal Failure Detection for Microservice Systems},
