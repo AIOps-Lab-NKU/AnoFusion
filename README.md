@@ -71,3 +71,13 @@ File Tree:
     ├── train.sh (Execution file for training phase.)
     └── eval.sh (Execution file for evaluation phase.)
 ```
+
+### Cite our paper (will be published at KDD'23)
+```
+@article{zhao2023robust,
+  title={Robust Multimodal Failure Detection for Microservice Systems},
+  author={Zhao, Chenyu and Ma, Minghua and Zhong, Zhenyu and Zhang, Shenglin and Tan, Zhiyuan and Xiong, Xiao and Yu, LuLu and Feng, Jiayi and Sun, Yongqian and Zhang, Yuzhi and others},
+  journal={arXiv preprint arXiv:2305.18985},
+  year={2023}
+}
+```
