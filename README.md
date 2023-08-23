@@ -81,10 +81,14 @@ AnoFusion paper is published in KDD 2023. If you use AnoFusion, we would appreci
 
 BibTex:
 ```
-@article{zhao2023robust,
-  title={Robust Multimodal Failure Detection for Microservice Systems},
-  author={Zhao, Chenyu and Ma, Minghua and Zhong, Zhenyu and Zhang, Shenglin and Tan, Zhiyuan and Xiong, Xiao and Yu, LuLu and Feng, Jiayi and Sun, Yongqian and Zhang, Yuzhi and others},
-  journal={arXiv preprint arXiv:2305.18985},
-  year={2023}
+@inproceedings{zhao2023robust,
+  author       = {Zhao, Chenyu and Ma, Minghua and Zhong, Zhenyu and Zhang, Shenglin and Tan, Zhiyuan and Xiong, Xiao and Yu, LuLu and Feng, Jiayi and Sun, Yongqian and Zhang, Yuzhi and others},
+  title        = {Robust Multimodal Failure Detection for Microservice Systems},
+  booktitle    = {Proceedings of the 29th {ACM} {SIGKDD} Conference on Knowledge Discovery
+                  and Data Mining, {KDD} 2023, Long Beach, CA, USA, August 6-10, 2023},
+  pages        = {5639--5649},
+  publisher    = {{ACM}},
+  year         = {2023},
+  doi          = {10.1145/3580305.3599902}
 }
 ```
